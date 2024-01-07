@@ -14,7 +14,6 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					--{name= 'auog', amount=2},
                     {name='native-flora', amount =20},
                     {name='moss', amount =10},
 					{name='water-barrel', amount=5,return_barrel = true},
@@ -32,7 +31,9 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog-food-01', amount =3},
+					{name='native-flora', remove_item = true},
+                    {name='moss', remove_item = true},
+					{name='auog-food-01', amount = 4},
 				},
 			results =
 				{
@@ -47,16 +48,13 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=4},
 					{name='saps', amount = 12},
 					{name='bedding', amount = 3},
 					{name='raw-fiber', amount = 15},
+					{name='auog-food-01', add_amount = 4},
 				},
 			results =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=4},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 4, amount_max = 20},
 				},
@@ -68,19 +66,15 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=8},
 					{name='saps', add_amount = 5},
 					{name='bedding',add_amount = 5},
 					{name='raw-fiber',add_amount = 5},
-					{name='auog-food-01',add_amount = 7},
-					{name='auog-food-02', amount =5},
+					{name='auog-food-01', remove_item = true},
+					{name='auog-food-02', amount = 8},
 
 				},
 			results =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=8},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 8, amount_max = 30},
 				},
@@ -92,15 +86,11 @@ FUN.autorecipes {
 		{
 			ingredients =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=14},
 					{name='saps', add_amount = 10},
 					{name='raw-fiber', add_amount = 10},
 				},
 			results =
 				{
-					{name='auog', remove_item = true},
-					--{name='auog', amount=14},
 					{name= 'auog-pup',remove_item = true},
 					{name= 'auog-pup', amount_min = 14, amount_max = 50},
 				},
@@ -110,19 +100,6 @@ FUN.autorecipes {
 		},
 	}
 }
-
--- data.raw.module["auog"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk02"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk03"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
--- data.raw.module["auog-mk04"].limitation = {
--- 	"auog-pup-breeding-1"
--- }
 
 --Raising auog pups
  FUN.autorecipes {
@@ -182,7 +159,9 @@ FUN.autorecipes {
 			ingredients =
 				{
 					{name='auog-pup', amount=8},
-					{name='auog-food-01', amount =3},
+					{name='native-flora', remove_item = true},
+                    {name='moss', remove_item = true},
+					{name='auog-food-01', amount = 5},
 					{name='saps', amount = 12},
 				},
 			results =
@@ -221,8 +200,8 @@ FUN.autorecipes {
 					{name='saps', add_amount = 5},
 					{name='bedding', add_amount = 5},
 					{name='raw-fiber', add_amount = 5},
-					{name='auog-food-01', add_amount = 7},
-					{name='auog-food-02', amount = 5},
+					{name='auog-food-01',  remove_item = true},
+					{name='auog-food-02', amount = 7},
 
 				},
 			results =
