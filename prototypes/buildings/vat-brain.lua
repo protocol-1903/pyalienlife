@@ -159,3 +159,37 @@ ENTITY {
         apparent_volume = 2.5
     }
 }
+
+data:extend{
+  {
+    type = "recipe-category",
+    name = "internal-vatbrain-category",
+    hidden = true,
+    hidden_in_factoriopedia = true
+  },
+  { -- hidden recipe used to check if machine is working
+    type = "recipe",
+    name = "internal-vatbrain-recipe",
+    icon = util.empty_icon().icon,
+    category = "internal-vatbrain-category",
+    ingredients = {{ type = "item", name = "internal-vatbrain-item", amount = 1, ignored_by_stats = 1}}
+  },
+  { -- hidden item for recipe and signals, can use existing item but this one is garunteed to work
+    type = "item",
+    name = "internal-vatbrain-item",
+    icon = util.empty_icon().icon,
+    stack_size = 1
+  },
+  { -- hidden assembling machine to craft the aforementioned recipe
+    type = "assembling-machine",
+    name = "internal-vatbrain-manager",
+    icon = util.empty_icon().icon,
+    energy_usage = "1W",
+    energy_source = {type = "void"},
+    crafting_categories = {"internal-vatbrain-category"},
+    fixed_recipe = "internal-vatbrain-recipe",
+    crafting_speed = 60,
+    hidden = true,
+    hidden_in_factoriopedia = true
+  }
+}
