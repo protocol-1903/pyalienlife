@@ -1,5 +1,5 @@
 ---------------------------------------------------------------------------------------------------
-Version: 3.0.45
+Version: ???
 Date: ???
   Changes:
     - Refactored internal vatbrain logic to be less resource intensive and only operate when it turns on/off
